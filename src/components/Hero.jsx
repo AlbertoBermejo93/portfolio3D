@@ -120,8 +120,8 @@ const Hero = () => {
         <Left>
           <Title>Think.Make.Solve.</Title>
           <WhatWeDo>
-            <Line src="./img/line.png"/>
-            <Subtitle>What we Do</Subtitle>
+            {/* <Line src="./img/line.png"/> */}
+            {/* <Subtitle>What we Do</Subtitle> */}
             <Desc>We enjoy creating delightful, human-centered digital experiences.</Desc>
             <Button>Learn More</Button>
           </WhatWeDo>
