@@ -2,7 +2,7 @@ import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
-import Laptop from "./Laptop";
+import Nerdbar from "./Nerdbar";
 
 const Desc = styled.div`
   width: 200px;
@@ -22,23 +22,22 @@ const Desc = styled.div`
   }
 `;
 
-const WebDesign = () => {
+const Illustration = () => {
   return (
     <>
       <Canvas>
         <Suspense fallback={null}>
           <Stage environment="city" intensity={0.6}>
-            <Laptop  />
+            <Nerdbar />
           </Stage>
           <OrbitControls enableZoom={false} autoRotate />
         </Suspense>
       </Canvas>
       <Desc>
-        We design products with a strong focus on both world class design and
-        ensuring your product is a market success.
+        We Illustrate
       </Desc>
     </>
   );
 };
 
-export default WebDesign;
+export default Illustration;

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-// import Development from "./Development";
-// import ProductDesign from "./ProductDesign";
+import Development from "./Development";
+import ProductDesign from "./ProductDesign";
 import WebDesign from "./WebDesign";
+import Illustration from "./Illustration"
+import Media from "./Media"
 
 const data = [
   "Web Design",
@@ -86,6 +88,7 @@ const ListItem = styled.li`
 
 const Right = styled.div`
   flex: 1;
+  
 `;
 
 const Works = () => {
@@ -103,14 +106,15 @@ const Works = () => {
           </List>
         </Left>
         <Right>
-        <WebDesign />
-          {/* {work === "Web Design" ? (
+          {work === "Web Design" ? (
             <WebDesign />
-          ) : work === "Development" ? (
-            <Development />
-          ) : (
-            <ProductDesign />
-          )} */}
+          ) : work === "Development" ? 
+            (<Development />)
+          : work === "Illustration" ? 
+            (<Illustration />) 
+          : work === "Product Design" ? 
+            (<ProductDesign />)
+          : (<Media />)}
         </Right>
       </Container>
     </Section>
