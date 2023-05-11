@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Box, MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
 
 
 const Section = styled.div`
@@ -82,7 +84,19 @@ const Who = () => {
   return (
     <Section>
       <Container>
-        <Left>3D model</Left>
+        <Left>
+        <Canvas camera={{fov: 25, position: [5,5,5]}}>
+          <OrbitControls enableZoom={false} />
+          <ambientLight intensity={1}/>
+          <directionalLight position={[3,2,1]}/>
+          <Box args={[1,1,1]} scale={1}>
+            <meshNormalMaterial 
+              color="#372557"
+              attach="material"
+            />
+          </Box>
+          </Canvas>
+        </Left>
         <Right>
           <Title>Think Outside the square space</Title>
           <Subtitle>Who we are</Subtitle>
