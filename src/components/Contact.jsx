@@ -97,21 +97,21 @@ const Contact = () => {
       );
   };
   return (
-    <Section>
+    <Section id="Contact">
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
-            <Title>Contact Us</Title>
-            <Input placeholder="Name" name="name" />
+            <Title>Contactez-nous</Title>
+            <Input placeholder="Nom" name="name" />
             <Input placeholder="Email" name="email" />
             <TextArea
-              placeholder="Write your message"
+              placeholder="Écrivez votre message"
               name="message"
               rows={10}
             />
             <Button type="submit">Send</Button>
             {success &&
-              "Your message has been sent. We'll get back to you soon :)"}
+              "Votre message a été envoyé. Nous vous répondrons bientôt :)"}
           </Form>
         </Left>
         <Right>

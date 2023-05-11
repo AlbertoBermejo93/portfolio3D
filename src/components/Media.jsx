@@ -6,7 +6,7 @@ import Social from "./Social";
 
 const Desc = styled.div`
   width: 200px;
-  height: 70px;
+  height: 80px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -34,7 +34,7 @@ const Media = () => {
         </Suspense>
       </Canvas>
       <Desc>
-        We product
+      Notre équipe de community managers hautement qualifiés est toujours à l'avant-garde des réseaux sociaux. On devient viral, tout comme nos clients.
       </Desc>
     </>
   );

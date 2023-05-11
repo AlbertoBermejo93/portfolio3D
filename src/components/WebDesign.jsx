@@ -6,7 +6,7 @@ import Laptop from "./Laptop";
 
 const Desc = styled.div`
   width: 200px;
-  height: 70px;
+  height: 80px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -34,8 +34,7 @@ const WebDesign = () => {
         </Suspense>
       </Canvas>
       <Desc>
-        We design products with a strong focus on both world class design and
-        ensuring your product is a market success.
+      Nous concevons des produits en mettant l'accent à la fois sur la conception et sur l'assurance que votre produit sera un succès sur le marché.
       </Desc>
     </>
   );

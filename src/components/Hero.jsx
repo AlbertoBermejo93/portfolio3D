@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import Navbar from './Navbar'
-import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
+import React, { Suspense } from "react";
+import styled from "styled-components";
+import Navbar from "./Navbar";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
 const Section = styled.div`
   height: 100vh;
@@ -55,9 +55,7 @@ const WhatWeDo = styled.div`
   gap: 10px;
 `;
 
-const Line = styled.img`
-  height: 5px;
-`;
+
 
 const Subtitle = styled.h2`
   color: #da4ea2;
@@ -117,34 +115,39 @@ const Img = styled.img`
 const Hero = () => {
   return (
     <Section>
-      <Navbar/>
+      <Navbar />
       <Container>
         <Left>
-          <Title>Think.Make.Solve.</Title>
+          <Title>Analiser. Créer. Résoudre.</Title>
           <WhatWeDo>
-            <Desc>We enjoy creating delightful, human-centered digital experiences.</Desc>
-            <Button>Learn More</Button>
+            <Subtitle>Ce que nous faisons</Subtitle>
           </WhatWeDo>
+          <Desc>
+          Nous aimons créer des expériences numériques agréables et centrées sur l'humain.
+          </Desc>
+          <Button><a href="#Studio">En savoir plus</a></Button>
         </Left>
         <Right>
-          <Canvas camera={{fov: 25, position: [5,5,5]}}>
-          <OrbitControls enableZoom={false} />
-          <ambientLight intensity={1}/>
-          <directionalLight position={[3,2,1]}/>
-          <Sphere args={[1,100,200]} scale={1.3}>
-            <MeshDistortMaterial 
-              color="#372557"
-              attach="material"
-              distort={0.5}
-              speed={2}
-            />
-          </Sphere>
+          <Canvas>
+            <Suspense fallback={null}>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2.4}>
+                <MeshDistortMaterial
+                  color="#3d1c56"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Suspense>
           </Canvas>
-          <Img src="./img/moon.png"/>
+          <Img src="./img/moon.png" />
         </Right>
       </Container>
     </Section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

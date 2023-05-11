@@ -4,6 +4,10 @@ import styled from 'styled-components'
 const Section = styled.div`
     display:flex;
     justify-content:center;
+
+    @media only screen and (max-width: 768px ) {
+        width: 100%;
+    }
 `;
 const Container = styled.div`
     width: 1400px;
@@ -11,22 +15,37 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 10px 0px;
+
+    @media only screen and (max-width: 768px ) {
+        width: 100%;
+        padding: 10px;
+    }
 `;
 const Links = styled.div`
     display:flex;
-    align-items: center;
+    align-items: end;
     gap: 50px;
 `;
 const Logo = styled.img`
+    display:flex;
+    align-items: end;
     height:50px;
 `;
 const List = styled.ul`
     display:flex;
     gap:20px;
     list-style:none;
+
+    @media only screen and (max-width: 768px ) {
+        display: none;
+    }
 `;
 const ListItem = styled.li`
-    
+   
+`;
+
+const ListLink = styled.a`
+    text-decoration: none;
 `;
 const Icons = styled.div`
     display:flex;
@@ -53,17 +72,17 @@ const Navbar = () => {
     <Section>
         <Container>
             <Links>
-            <Logo src="./img/logo.png"/>
+            <Logo src="./img/WhiteLogo.png"/>
             <List>
-                <ListItem>Home</ListItem>
-                <ListItem>Studio</ListItem>
-                <ListItem>Work</ListItem>
-                <ListItem>Contact</ListItem>
+                <ListItem><a href="#Home">Accueil</a></ListItem>
+                <ListItem><a href="#Studio">Studio</a></ListItem>
+                <ListItem><a href="#Work">Services</a></ListItem>
+                
             </List>
             </Links>
             <Icons>
                 <Icon scr="./img/search.png"></Icon>
-                <Button>Hire Now</Button>
+                <Button><a href="#Contact">Contact</a></Button>
             </Icons>
         </Container>
     </Section>

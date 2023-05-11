@@ -7,11 +7,11 @@ import Illustration from "./Illustration"
 import Media from "./Media"
 
 const data = [
-  "Web Design",
-  "Development",
+  "Webdesign",
+  "Développement",
   "Illustration",
   "Product Design",
-  "Social Media",
+  "Réseaux sociaux",
 ];
 
 const Section = styled.div`
@@ -94,7 +94,7 @@ const Right = styled.div`
 const Works = () => {
   const [work, setWork] = useState("Web Design");
   return (
-    <Section>
+    <Section id="Work">
       <Container>
         <Left>
           <List>
@@ -106,9 +106,9 @@ const Works = () => {
           </List>
         </Left>
         <Right>
-          {work === "Web Design" ? (
+          {work === "Webdesign" ? (
             <WebDesign />
-          ) : work === "Development" ? 
+          ) : work === "Développement" ? 
             (<Development />)
           : work === "Illustration" ? 
             (<Illustration />) 

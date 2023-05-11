@@ -6,7 +6,7 @@ import Nerdbar from "./Nerdbar";
 
 const Desc = styled.div`
   width: 200px;
-  height: 70px;
+  height: 160px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -34,7 +34,7 @@ const Illustration = () => {
         </Suspense>
       </Canvas>
       <Desc>
-        We Illustrate
+      Notre équipe de designers talentueux excelle dans la création de designs captivants qui surpassent les normes du marché, tandis que notre approche collaborative assure l'implication du client tout au long du processus artistique, aboutissant à un résultat de projet réussi.
       </Desc>
     </>
   );

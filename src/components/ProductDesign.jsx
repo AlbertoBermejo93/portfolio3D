@@ -6,12 +6,12 @@ import Chips from "./Chips";
 
 const Desc = styled.div`
   width: 200px;
-  height: 70px;
+  height: 130px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
   position: absolute;
-  top: 100px;
+  bottom: 200px;
   right: 100px;
   @media only screen and (max-width: 768px) {
     top: 0;
@@ -34,7 +34,7 @@ const ProductDesign = () => {
         </Suspense>
       </Canvas>
       <Desc>
-        We product
+      Nos concepteurs de produits qualifiés produisent constamment des designs captivants qui bouleversent les tendances. Notre mission finale est d'élever les idées de nos clients et de les amener au niveau supérieur.
       </Desc>
     </>
   );

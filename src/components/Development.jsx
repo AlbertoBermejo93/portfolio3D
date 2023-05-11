@@ -6,12 +6,12 @@ import Logo from "./Logo";
 
 const Desc = styled.div`
   width: 200px;
-  height: 70px;
+  height: 130px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
   position: absolute;
-  top: 100px;
+  bottom: 200px;
   right: 100px;
   @media only screen and (max-width: 768px) {
     top: 0;
@@ -34,7 +34,7 @@ const Development = () => {
         </Suspense>
       </Canvas>
       <Desc>
-        We dev
+      Nous fournissons des solutions de développement logiciel de premier ordre, nos services sont conçus pour incorporer des éléments de conception captivants et offrir des expériences uniques et conviviales.
       </Desc>
     </>
   );

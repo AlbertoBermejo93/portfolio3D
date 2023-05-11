@@ -8,50 +8,47 @@ const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-
 `;
 
 const Container = styled.div`
-  height: 100%;
+  height: 100vh;
   scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
-
 `;
 
 const Left = styled.div`
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+  flex: 1;
   @media only screen and (max-width: 768px) {
-    flex: 1;
-    align-items: center;
+    display: none;
   }
 `;
 
-
-const Right = styled.div`
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  @media only screen and (max-width: 768px) {
-    flex: 1;
-    align-items: center;
-  }
-`;
 const Title = styled.h1`
   font-size: 74px;
   @media only screen and (max-width: 768px) {
+    font-size: 60px;
+  }
+`;
+
+const Right = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  @media only screen and (max-width: 768px) {
+    align-items: center;
     text-align: center;
   }
+`;
+
+const WhatWeDo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;
 
 const Subtitle = styled.h2`
@@ -61,17 +58,13 @@ const Subtitle = styled.h2`
 const Desc = styled.p`
   font-size: 24px;
   color: lightgray;
-  @media only screen and (max-width: 768px) {
-    padding: 20px;
-    text-align: center;
-  }
 `;
 
 const Button = styled.button`
   background-color: #da4ea2;
   color: white;
   font-weight: 500;
-  width: 100px;
+  width: 120px;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -80,9 +73,10 @@ const Button = styled.button`
 
 
 
+
 const Who = () => {
   return (
-    <Section>
+    <Section id='Studio'>
       <Container>
         <Left>
         <Canvas camera={{fov: 25, position: [5,5,5]}}>
@@ -98,10 +92,10 @@ const Who = () => {
           </Canvas>
         </Left>
         <Right>
-          <Title>Think Outside the square space</Title>
-          <Subtitle>Who we are</Subtitle>
-          <Desc>A creative group pf designer and developers with passion for the arts</Desc>
-          <Button>See our work</Button>
+          <Title>Think  Outside the square space</Title>
+          <Subtitle>Qui sommes-nous</Subtitle>
+          <Desc>Un groupe créatif de designers et de développeurs passionnés par les arts</Desc>
+          <Button><a href="#Work">Découvrez notre travail</a></Button>
         </Right>
       </Container>
     </Section>
