@@ -34,7 +34,7 @@ const Media = () => {
         </Suspense>
       </Canvas>
       <Desc>
-      Notre équipe de community managers hautement qualifiés est toujours à l'avant-garde des réseaux sociaux. On devient viral, tout comme nos clients.
+      Notre équipe de community managers hautement qualifiés est toujours à l'avant-garde des réseaux sociaux.
       </Desc>
     </>
   );
